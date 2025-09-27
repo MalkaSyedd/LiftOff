@@ -1,11 +1,20 @@
 
 import React, { useState } from "react";
 import "./Login.css"; // Make sure your CSS is saved as Login.css
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePassword = () => setShowPassword(!showPassword);
+  const navigate = useNavigate();
+
+  const goToSignUp = () => {
+    navigate('/SignUpPage'); // this is the route of your Sign Up page
+  };
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,12 +35,12 @@ const Login = () => {
             </div>
           </div>
           <div className="login-header">
-          <h2>Liftoff</h2>
+          <h2 className="logo-text">
+          <span>Liftoff</span>
+          </h2> {/*has animationm */}
           <p>Please log in or sign up to continue</p>
         </div>
-
         </div>
-
         <form className="login-form" onSubmit={handleSubmit} noValidate>
           <div className="form-group">
             <div className="input-group neu-input">
@@ -98,11 +107,20 @@ const Login = () => {
           </div>
 
           <button type="submit" className="neu-button login-btn">
-            <span className="btn-text">Sign In</span>
+            <span className="btn-text">Log In</span>
             <div className="btn-loader">
               <div className="neu-spinner"></div>
             </div>
           </button>
+
+          
+          <button type="button" className="neu-button signup-btn" onClick={goToSignUp}>
+            <span className="btn-text">Sign up</span>
+            <div className="btn-loader">
+              <div className="neu-spinner"></div>
+            </div>
+          </button>
+
         </form>
       </div>
     </div>
