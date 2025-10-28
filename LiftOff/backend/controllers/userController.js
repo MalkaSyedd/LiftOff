@@ -94,5 +94,17 @@ export const logout = (req, res) => {
 };
 
 
+export const checkAuth = (req, res) => {
+    try {
+        if(!req.user){
+            console.log("Failed checking");
+            return res.status(401).json({ message: "Not authenticated"});
+        }
+        res.status(200).json(req.user);
+    }catch (error) {
+        console.log("Error in checkAuth", error.message);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+}
 
 
