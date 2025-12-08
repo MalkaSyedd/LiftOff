@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# LiftOff — Flight Booking Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LiftOff is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) flight booking simulation application that allows users to search, book, and manage flights with a modern and responsive user interface. The platform includes user accounts, airline seller accounts, reward points, secure bookings, and an admin dashboard for system management.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### User Experience
+- Secure user registration and login
+- Search for flights
+- Filter by date, location, price, and more
+- Book flights for individuals or groups
+- Simulated saved card and fast checkout system
+- View booking history and reward point balance
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Seller Experience
+- Airline sellers can register
+- Admin approval required before they can offer flights
+- Manage and publish flight options
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Admin Tools
+- Full management of users, sellers, flights, and bookings
+- Full access to system analytics
+- Approve or reject seller activation requests
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+| Category | Technology |
+|---------|------------|
+| Frontend | React.js, React Router, Axios |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas |
+| Authentication | JSON Web Tokens (JWT) |
+| Styling | Custom CSS |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation and Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository:
 
-### `npm run eject`
+```bash
+git clone https://github.com/MalkaSyedd/LiftOff.git
+cd LiftOff
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Install server dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Open a new terminal and then split terminal
+- In the First Terminal do
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd server
+npm install
+node server.js
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You should expect:
+- Backend server starts successfully
+- Logs like:
+  - Server running on port 9000
+  - Connected to MongoDB
+- Keep this terminal open
 
-## Learn More
+## Install client dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- In the second Terminal do
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+cd frontend
+npm install
+npm start
+```
 
-### Code Splitting
+You should expect:
+- Browser opens automatically
+- App running at: http://localhost:3000
+- LiftOff user interface will appear and reload with any code changes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+Both backend and frontend must run at the same time for the app to work correctly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
