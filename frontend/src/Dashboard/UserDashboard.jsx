@@ -850,12 +850,10 @@ function CheckIn() {
           <p><strong>{result.airline}</strong> — {result.flightNo}</p>
           
           <p>{result.from} → {result.to}</p>
-          
-          <p>Departure: {formatDT(result.departIso)}</p>
 
           {/* Immediately treat found booking as checked in and show QR */}
           <p>
-            <strong className="status-success">Successfully checked in ✅</strong>
+            <strong className="status-success">Successfully checked in</strong>
           </p>
 
           <div style={{ marginTop: 16, textAlign: 'center' }}>
